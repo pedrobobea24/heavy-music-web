@@ -1,34 +1,62 @@
 import React from 'react';
-import { Globe, Mic2, BarChart3, Wallet, Zap, Share2 } from 'lucide-react';
+import { Button } from './Button';
+import { Check } from 'lucide-react';
 
-const features = [
-  { icon: <Globe className="w-6 h-6" />, title: "Alcance Global", description: "Distribución directa a Spotify, Apple Music, TikTok, Instagram y más de 150 tiendas." },
-  { icon: <Wallet className="w-6 h-6" />, title: "Regalías Claras", description: "Cobra tus ganancias mensualmente. Sin mínimos abusivos. Transparencia total." },
-  { icon: <BarChart3 className="w-6 h-6" />, title: "Data en Tiempo Real", description: "Descubre dónde te escuchan. Estadísticas detalladas para planear tu próxima gira." },
-  { icon: <Zap className="w-6 h-6" />, title: "Split Pay", description: "Divide ganancias con tus colaboradores automáticamente. Nosotros hacemos las cuentas." },
-  { icon: <Share2 className="w-6 h-6" />, title: "Smart Links", description: "Enlaces inteligentes gratuitos para cada lanzamiento. Facilita que tus fans te escuchen." },
-  { icon: <Mic2 className="w-6 h-6" />, title: "Protección de Content ID", description: "Monetiza cuando otros usen tu música en YouTube, Facebook e Instagram." }
-];
-
-export const Features: React.FC = () => {
+export const Pricing: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-slate-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-display font-black text-gray-900 mb-4 tracking-tight">EL CONTROL ES <span className="text-purple-600">TUYO</span>.</h2>
-            <p className="text-lg text-gray-500 font-medium">Herramientas profesionales para artistas que se toman su carrera en serio.</p>
-          </div>
-          <button className="text-purple-600 font-bold hover:text-purple-800 transition-colors border-b-2 border-purple-200 hover:border-purple-600 pb-1">Ver todas las características</button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="group p-8 bg-white border border-gray-200 hover:border-purple-500 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-purple-500/10 rounded-xl">
-              <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 font-display">{feature.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">{feature.description}</p>
+    <section id="pricing" className="py-24 bg-black text-white relative overflow-hidden">
+      {/* Background Graphic */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/40 to-transparent pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div>
+                <h2 className="text-4xl md:text-6xl font-display font-black mb-6 uppercase tracking-tight">
+                    Empieza Gratis.<br/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Crece con nosotros.</span>
+                </h2>
+                <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                    Creemos en tu talento. Por eso eliminamos las barreras de entrada. No pagues por subir tu música. Nosotros solo ganamos una pequeña comisión cuando tú generas ingresos.
+                </p>
+                
+                <div className="space-y-4 mb-8">
+                    {[
+                        "Subidas Ilimitadas Gratis",
+                        "Sin cuotas mensuales ni anuales",
+                        "Mantienes el 100% de la propiedad intelectual",
+                        "Soporte dedicado para artistas"
+                    ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                                <Check size={14} className="text-green-400" />
+                            </div>
+                            <span className="font-medium text-gray-200">{item}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                    Crear cuenta gratis
+                </Button>
             </div>
-          ))}
+
+            <div className="relative">
+                <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 md:p-12 rounded-3xl text-center relative overflow-hidden group hover:border-purple-500/50 transition-colors">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    
+                    <h3 className="text-2xl font-bold mb-2">Modelo Heavy</h3>
+                    <div className="my-8">
+                        <span className="text-8xl font-black text-white tracking-tighter">15%</span>
+                        <p className="text-gray-400 font-medium uppercase tracking-widest text-sm mt-2">Comisión sobre regalías</p>
+                    </div>
+                    
+                    <div className="bg-gray-800/50 rounded-xl p-6 text-sm text-gray-400 leading-relaxed">
+                        Solo tomamos el 15% de lo que generes en plataformas digitales. El 85% restante es todo tuyo. Sin letras pequeñas ni cargos ocultos.
+                    </div>
+                </div>
+            </div>
+
         </div>
       </div>
     </section>
