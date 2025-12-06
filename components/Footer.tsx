@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-red-600"><Youtube size={20} /></a>
             </div>
             <a href="mailto:hello@heavymusic.com" className="flex items-center text-sm text-gray-600 hover:text-purple-600">
-                <Mail size={16} className="mr-2" /> hello@heavymusic.com
+                <Mail size={16} className="mr-2" /> info@heavymusic.com
             </a>
           </div>
 
