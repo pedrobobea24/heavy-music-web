@@ -6,7 +6,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = "h-10" }) =
 
   if (useUploadedImage) {
     return (
-      <img src="/logo.PNG" alt="Heavy Music Logo" className={`${className} object-contain`} />
+      <img src="/logo.png" alt="Heavy Music Logo" className={`${className} object-contain`} />
     );
   }
 
