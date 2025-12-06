@@ -2,11 +2,11 @@ import React from 'react';
 
 export const Logo: React.FC<{ className?: string }> = ({ className = "h-10" }) => {
   // Cuando tengas tu logo.png subido, cambia esto a true
-  const useUploadedImage = false;
+  const useUploadedImage = true;
 
   if (useUploadedImage) {
     return (
-      <img src="/logo.png" alt="Heavy Music Logo" className={`${className} object-contain`} />
+      <img src="/logo.PNG" alt="Heavy Music Logo" className={`${className} object-contain`} />
     );
   }
 
