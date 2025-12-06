@@ -20,31 +20,31 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Plataforma</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-purple-600">Precios</a></li>
-              <li><a href="#" className="hover:text-purple-600">Features</a></li>
-              <li><a href="#" className="hover:text-purple-600">Heavy AI</a></li>
-              <li><a href="#" className="hover:text-purple-600">Login</a></li>
+              <li><a href="#pricing" className="hover:text-purple-600 transition-colors">Modelo de Negocio</a></li>
+              <li><a href="#features" className="hover:text-purple-600 transition-colors">Características</a></li>
+              <li><a href="#app" className="hover:text-purple-600 transition-colors">App Móvil</a></li>
+              <li><a href="#login" className="hover:text-purple-600 transition-colors">Iniciar Sesión</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-purple-600">Términos de Servicio</a></li>
-              <li><a href="#" className="hover:text-purple-600">Política de Privacidad</a></li>
-              <li><a href="#" className="hover:text-purple-600">Copyright</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors">Términos de Servicio</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors">Política de Privacidad</a></li>
+              <li><a href="#" className="hover:text-purple-600 transition-colors">Copyright</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Conecta</h4>
             <div className="flex space-x-4 mb-4">
-              <a href="#" className="text-gray-400 hover:text-pink-600"><Instagram size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-blue-400"><Twitter size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-red-600"><Youtube size={20} /></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-600 transition-colors"><Instagram size={20} /></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors"><Twitter size={20} /></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><Youtube size={20} /></a>
             </div>
-            <a href="mailto:hello@heavymusic.com" className="flex items-center text-sm text-gray-600 hover:text-purple-600">
-                <Mail size={16} className="mr-2" /> info@heavymusic.com
+            <a href="mailto:hello@heavymusic.com" className="flex items-center text-sm text-gray-600 hover:text-purple-600 transition-colors">
+                <Mail size={16} className="mr-2" /> hello@heavymusic.com
             </a>
           </div>
 
