@@ -33,16 +33,26 @@ export const MobileApp: React.FC = () => {
 
              <div className="flex flex-col sm:flex-row gap-5">
                {/* App Store Button */}
-               <button className="group flex items-center gap-4 bg-white text-black px-6 py-4 rounded-xl hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-lg shadow-white/5">
+               <a 
+                 href="https://apps.apple.com" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="group flex items-center gap-4 bg-white text-black px-6 py-4 rounded-xl hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-lg shadow-white/5"
+               >
                  <Apple size={32} className="fill-current" />
                  <div className="text-left">
                    <div className="text-[10px] font-bold uppercase tracking-wider opacity-60">Consíguela en el</div>
                    <div className="text-xl font-black leading-none font-display">App Store</div>
                  </div>
-               </button>
+               </a>
 
                {/* Google Play Button */}
-               <button className="group flex items-center gap-4 bg-transparent border-2 border-gray-700 text-white px-6 py-4 rounded-xl hover:bg-gray-800 hover:border-gray-600 transition-all transform hover:-translate-y-1">
+               <a 
+                 href="https://play.google.com" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="group flex items-center gap-4 bg-transparent border-2 border-gray-700 text-white px-6 py-4 rounded-xl hover:bg-gray-800 hover:border-gray-600 transition-all transform hover:-translate-y-1"
+               >
                  <div className="w-8 h-8 flex items-center justify-center">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full group-hover:text-green-400 transition-colors">
                         <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.36,13.08L18.81,13.97L16.14,11.3L18.81,8.63L20.36,9.53C20.89,9.83 20.89,10.78 20.36,11.08M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
@@ -52,7 +62,7 @@ export const MobileApp: React.FC = () => {
                    <div className="text-[10px] font-bold uppercase tracking-wider opacity-60">Disponible en</div>
                    <div className="text-xl font-black leading-none font-display">Google Play</div>
                  </div>
-               </button>
+               </a>
              </div>
           </div>
 
